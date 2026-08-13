@@ -3,5 +3,5 @@ export interface AuditWriter {
 }
 
 export async function recordPurchase(writer: AuditWriter, orderId: string): Promise<void> {
-  writer.write(`purchase:${orderId}`);
+  await writer.write(`purchase:${orderId}`);
 }
