@@ -4,7 +4,5 @@ export interface User {
 }
 
 export function findActiveUser(users: readonly User[], id: string): User | undefined {
-  return users.find((user) => {
-    user.id === id && user.active;
-  });
+  return users.find((user) => user.id === id && user.active);
 }
