@@ -4,5 +4,5 @@ export interface Coordinates {
 }
 
 export function sameCoordinates(left: Coordinates, right: Coordinates): boolean {
-  return left === right;
+  return left.latitude === right.latitude && left.longitude === right.longitude;
 }
